@@ -1,0 +1,187 @@
+/* Reset dan gaya dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pastikan tinggi minimum body adalah tinggi viewport */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #006644;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background-color: #00aa66;
+    color: #fff;
+  }
+  
+  main {
+    flex: 1; /* Buat main fleksibel untuk mengisi ruang */
+    padding-top: 80px; /* Sesuaikan dengan header tetap */
+    padding-bottom: 20px; /* Tambahkan ruang untuk footer */
+  }
+  
+  /* Gambar besar banner prestasi */
+  .prestasi-banner {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .banner-img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Section daftar prestasi */
+  .daftar-prestasi {
+    background-color: #e0f7ea;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .daftar-prestasi h2 {
+    margin-bottom: 20px;
+    color: #006644;
+    text-align: center;
+  }
+  
+  .daftar-prestasi ol {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  
+  footer {
+    background-color: #003322;
+    color: white;
+    padding: 20px 10px 10px 10px;
+    width: 100%;
+    position: relative; /* Ubah dari fixed ke relative */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+
+  .gallery-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .image-item {
+    flex: 1 1 calc(30% - 10px);
+    max-width: 30%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .image-item img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-item img.expanded {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+
+  .social-media-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-list li{
+    list-style: none;
+    cursor: pointer;
+}
